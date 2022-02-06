@@ -27,6 +27,7 @@ function Header() {
           height={40}
           onClick={() => router.push("/")}
           className="cursor-pointer"
+          alt="Google logo"
         />
         <form
           action=""

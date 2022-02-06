@@ -1,6 +1,7 @@
 import * as React from 'react'
 import {Menu, Transition} from '@headlessui/react'
 import {signIn, signOut, useSession} from 'next-auth/react'
+import Image from 'next/image';
 
 function Avatar({ url, className }) {
   const {data: session, status } = useSession();
@@ -12,11 +13,11 @@ function Avatar({ url, className }) {
             <>
               <span className="">
                 <Menu.Button className="inline-flex justify-center w-full text-sm font-medium leading-5 ">
-                  <img
+                  <Image
                     src={url}
                     className={`rounded-full h-10 w-10 cursor-pointer transition duration-150 transform hover:scale-110 ${className}`}
                     loading="lazy"
-                    alt=""
+                    alt="Avatar"
                   />
                 </Menu.Button>
               </span>
