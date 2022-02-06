@@ -14,10 +14,12 @@ function Avatar({ url, className }) {
               <span className="">
                 <Menu.Button className="inline-flex justify-center w-full text-sm font-medium leading-5 ">
                   <Image
-                    src={url}
+                    src={!session.user.image ? url : session.user.image}
                     className={`rounded-full h-10 w-10 cursor-pointer transition duration-150 transform hover:scale-110 ${className}`}
                     loading="lazy"
                     alt="Avatar"
+                    width={40}
+                    height={40}
                   />
                 </Menu.Button>
               </span>
